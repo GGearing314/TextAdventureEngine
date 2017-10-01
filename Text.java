@@ -1,8 +1,8 @@
 //Really simple text based adventure engine, uses string arrays to store choices and results and a 2D array to organise them
 import java.io.*;	//needed for input
 public class Text{
+	
 	//STORY SECITON----------------------------
-	//snippet for choice array ='ch'
 	//choices and outputs for each choice
 	//All arrays must have 8 elements , 4 choices and respective results
 	public static String[] choice0={"Go into the tavern","Go to the market stall","Look for someone to talk to","You walk to the tavern and the smell of beer and blood hits your nose as you cross the threshold","You walk up the the market stall and find a gnome standing on the top smoking a pipe, his wares are splayed about him","The nearest person is a grimy peasant"};
@@ -47,16 +47,16 @@ public class Text{
 		}
 	}
 	public static String getInput(String prompt){
-    System.out.print(prompt);
-    InputStreamReader isr=new InputStreamReader(System.in);
-    BufferedReader buffer=new BufferedReader(isr);
-    String input="";
-    try{
-  		input=buffer.readLine();
-    }
-    catch(IOException e){
-      System.out.println("Input Error");
-    }
-    return input;
+    		System.out.print(prompt);
+    		InputStreamReader isr=new InputStreamReader(System.in);
+    		BufferedReader buffer=new BufferedReader(isr);
+    		String input="";
+		try{
+			input=buffer.readLine();
+		}
+		catch(IOException e){
+			System.out.println("Input Error");
+		}
+		return input;
   }
 }
